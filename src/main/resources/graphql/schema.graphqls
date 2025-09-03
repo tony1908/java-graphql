@@ -1,0 +1,33 @@
+type Property {
+  id: Int!
+  image: String!
+  title: String!
+  type: String!
+  location: String!
+  details: String!
+  host: String!
+  price: Int!
+  rating: Int!
+}
+
+input PropertyInput {
+  image: String!
+  title: String!
+  type: String!
+  location: String!
+  details: String!
+  host: String!
+  price: Int!
+  rating: Int!
+}
+
+type Query {
+  hello: String
+  greet(name: String!): String
+  properties: [Property!]!
+  property(id: Int!): Property
+}
+
+type Mutation {
+  addProperty(input: PropertyInput!): Property!
+}
